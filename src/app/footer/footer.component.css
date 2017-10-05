@@ -1,0 +1,26 @@
+.abc ul li
+{
+	list-style:none
+}
+.icon
+{
+    height:80px;
+    width:110px;
+    margin-left:140px;
+    margin-bottom:10px;
+}
+.def
+{
+    margin-left:45px;
+}
+.example-fill-remaining-space {
+    
+     flex: 1 1 auto;
+   }
+.foot
+   {
+       bottom:0px;
+       margin-top: 95px;
+       position: fixed;
+       width: 100%;
+   }   

@@ -1,0 +1,23 @@
+<div *ngIf = 'this.gitservice.data'>
+ <md-grid-list cols = "2">
+        <md-grid-tile>Name : {{this.gitservice.data.name}}<br>
+                      Followers : {{this.gitservice.data.followers}}<br>
+                      Blog : {{this.gitservice.data.blog}}<br>
+                      Location : {{this.gitservice.data.location}}<br>
+                    </md-grid-tile>
+    <md-grid-tile>
+      <img md-card-image src="{{this.gitservice.data.avatar_url}}" alt="image" class="image img-responsive">
+    </md-grid-tile>
+   
+     </md-grid-list>
+    <md-grid-list cols = "2" >
+        <md-grid-tile>
+            <h1>Public-Repositories</h1>
+          </md-grid-tile>
+          <md-grid-tile>
+                      <md-chip-list *ngFor="let repo of this.gitservice.repo; let i=index;" class="repo" class="mat-chip-list-stacked" aria-orientation="horizontal">
+                          <md-chip><a href="{{repo.clone_url}}">{{repo.name}} </a></md-chip>
+                      </md-chip-list>
+          </md-grid-tile>
+    </md-grid-list>    
+</div> 
